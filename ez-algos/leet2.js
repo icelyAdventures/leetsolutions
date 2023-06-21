@@ -22,22 +22,22 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
  */
 
 var isPalindrome = function(x){
-    // let newStr = String(x);
-    // let reversedStr = newStr === newStr.split("").reverse().join("");
-    // return newStr === reversedStr
+    let newStr = String(x);
+    let reversedStr = newStr === newStr.split("").reverse().join("");
+    return newStr === reversedStr
     
     
-    let counter = 0;
+    // let counter = 0;
 
-    for(let i = 0; i < x.length; i++){
-        for(let j = x.length - 1; j > -1; j--){
-            if(i === j){
-                counter++
-            }
-        }
-    }
+    // for(let i = 0; i < x.length; i++){
+    //     for(let j = x.length - 1; j > -1; j--){
+    //         if(i === j){
+    //             counter++
+    //         }
+    //     }
+    // }
 
-    return counter !== 0
+    // return counter !== 0
 
 }
 
