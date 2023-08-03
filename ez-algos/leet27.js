@@ -20,31 +20,13 @@ Output: [1,1]
  */
 
 var getRow = function(rowIndex){
-    // let pascalsTriangle = [];
-
-    // for(let i = 0; i < rowIndex + 1; i++){
-    //     let row = new Array(i + 1);
-    //     row[0] = 1;
-    //     row[row.length - 1] = 1;
-
-    //     for(let j = 1; j < row.length - 1; j++){
-    //         let rowAbove = pascalsTriangle[i - 1];
-    //         row[j] = rowAbove[j - 1] + rowAbove[j];
-    //     }
-
-    //     pascalsTriangle.push(row)
-
-
-    // }
-    // return pascalsTriangle[rowIndex]
-
     let row = [];
 
   for (let i = 0; i <= rowIndex; i++) {
       row[i] = 1;
-    for (let j = i - 1; j > 0; j--) {
-      row[j] += row[j - 1];
-    }
+      for (let j = i - 1; j > 0; j--) {
+        row[j] += row[j - 1];
+      }
   }
 
   return row;
